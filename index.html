@@ -9,8 +9,331 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/main.css">  
+    <link rel="stylesheet" href="assets/css/header.css">  
+    <link rel="stylesheet" href="assets/css/footer.css">  
+    <link rel="stylesheet" href="assets/css/table.css">  
+    <link rel="stylesheet" href="assets/css/overlay.css">  
+    <link rel="stylesheet" href="assets/css/underline.css">  
 </head>
 
 <body>
+    <!--Navigation-->
+    <nav id="navigation" role="navigation" class="sticky">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu" class="list-inline">
+            <a class="logo-position" href="#intro">
+                <img class="logo-navbar" src="assets/img/logo.png">
+            </a>
+            <a class="link-to-right" href="#contact">
+                <li style="color: #000000;">
+                    <span class="hover-underline">Contact</span>
+                </li>
+            </a>
+            <a class="link-to-right" href="#gallery">
+                <li style="color: #000000;">
+                    <span class="hover-underline">Gallery</span>
+                </li>
+            </a>
+            <a class="link-to-right" href="#services">
+                <li style="color: #000000;">
+                    <span class="hover-underline">Services</span>
+                </li>
+            </a>
+            <a class="link-to-right" href="#intro">
+                <li style="color: #000000;">
+                    <span class="hover-underline">About us</span>
+                </li>
+            </a>
+            <a class="link-to-right" href="#home">
+                <li style="color: #000000;">
+                    <span class="hover-underline">Home</span>
+                </li>
+            </a>
+          </ul>
+        </div>
+    </nav>
+
+    <!--Cover-->
+    <div class="section" style="height: 0px;" id="home"></div>
+    <div class="cover" style="overflow-y: hidden;">
+        <row style="overflow-y: hidden;">
+            <div class="col-md-20 col-lg-20" style="margin: 50px;">
+                <p class="title">Template</p>
+            </div>
+            <div class="col-md-20 col-lg-20">
+                <a class="link-to-right" href="#services">
+                    <button class="btn btn-cover" type="button" 
+                    style="margin-left: 50px; margin-right: 50px;">
+                        Show Details
+                    </button>
+                </a>
+            </div>
+        </row>
+    </div>
+    
+    <!--Welcome section-->
+    <div class="section" id="intro"></div>
+    <div class="block">
+        <div class="row">
+            <div class="col-md-10 col-lg-4 offset-md-1 offset-lg-0" style="text-align: center;">
+                <h1>
+                    Welcome!
+                </h1>
+            </div>
+            <div class="col-md-10 col-lg-6 offset-md-1">
+                <p>
+                    Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et 
+                    Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+                </p>
+                <p>
+                    This book is a treatise on the theory of ethics, very popular during the 
+                    Renaissance.
+                </p>
+                <p>
+                    The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a 
+                    line in section 1.10.32.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Gallery promo-->
+    <div class="section" id="gallery"></div>
+    <div class="full-block" style="text-align: center;">
+        <h1>Click Here</h1>
+        <button class="btn btn-dark btn-orange " type="button" onclick="showGalleryOverlay()">
+            View Gallery
+        </button>
+        
+        <br/>
+        <br/>
+        <br/>
+        <div class="row template-col-3" style="padding-bottom: 30px;">
+            <div class="col-md-10 col-lg-3 offset-md-1 offset-lg-0" style="text-align: center;">
+                <div class="template-g template-1"></div>
+            </div>
+            <div class="col-md-10 col-lg-3 offset-md-1">
+                <div class="template-g template-2"></div>
+            </div>            
+            <div class="col-md-10 col-lg-3 offset-md-1">
+                <div class="template-g template-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-overlay">
+        <div class="popup">
+            <div class="bg" style="width: 80%; height: 500px; overflow-y: scroll;">
+                <img class="logo-overlay" src="assets/img/logo.png"> 
+                <span style="float: right; margin: 10px;" onclick="hideGalleryOverlay()">
+                    <img class="x-icon" src="assets/img/icon/x_icon.png">
+                </span>
+                <h1>TemplateSite</h1>
+                <div>
+                    <!--Gallery-->
+
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <!--Services-->
+    <div class="section" id="services"></div>
+    <div class="full-block">
+        <h1>Services & Prices</h1>
+        <br/>
+        <div>
+            <table class="table-orange">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Service I.</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>Service II.</td>
+                        <td>$45</td>
+                    </tr>
+                    <tr>
+                        <td>Service III.</td>
+                        <td>$100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <div class="row">            
+            <br/>
+            <div class="col-md-10 col-lg-10 offset-md-1">
+                <br/>
+                <p>
+                    <h4>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                    </h4>
+                </p>
+                <br/>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the 
+                    majority have suffered alteration in some form, by injected humour, or 
+                    randomised words which don't look even slightly believable. <br/>
+                </p>
+                <p>
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below 
+                    for those interested.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact-->
+    <div class="section" id="contact"></div>
+    <div class="block">
+        <div class="row" style="text-align: center;">
+            <div class="col-md-10 col-lg-5 offset-md-1 offset-lg-0">
+                <h1>
+                    Contact Us
+                </h1>
+                <p>
+                    <button class="btn btn-dark btn-orange " 
+                        type="button" onclick="showContactOverlay()">
+                            Make A Reservation
+                    </button>
+                </p>
+            </div>
+            <div class="col-md-10 col-lg-6 offset-md-1">
+                <br/>
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                    It has roots in a piece of classical Latin literature from 45 BC, 
+                    making it over 2000 years old. Richard McClintock, a Latin professor 
+                    at Hampden-Sydney College in Virginia, looked up one of the more 
+                    obscure Latin words, consectetur, from a Lorem Ipsum passage, and 
+                    going through the cites of the word in classical literature, 
+                    discovered the undoubtable source.
+                </p>
+                <h3>+1111 222 33 44</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="row" style="text-align: center; width: 100%; margin: auto;">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="500" id="gmap_canvas" 
+                    src="https://maps.google.com/maps?q=55.3417774,%2021.7777747&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                    <br>
+                    <style>.mapouter{position:relative;text-align:right;width:100%;}</style><a href="https://www.embedgooglemap.net"></a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;width:100%;}</style></div></div>
+        </div>
+    </div>
+
+    <div id="contact-overlay">
+        <div class="popup">
+            <div class="bg">
+                <img class="logo-overlay" src="assets/img/logo.png"> 
+                <span style="float: right; margin: 10px;" onclick="hideContactOverlay()">
+                    <img class="x-icon" src="assets/img/icon/x_icon.png">
+                </span>
+                <h1>TemplateSite</h1>
+                <br/>
+                <span class="loc-desc">Location: -</span>
+                <h3>+1111 222 33 44</h3>
+                <span class="loc-desc">TemplateSite@templatemail.com</span>
+                <br/>
+                <br/>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="section"></div>
+    <div>
+        <div class="footer">
+            <span>
+                Find Us On Social Media
+            </span>
+            <div class="row">
+                <div class="icons">
+                    <br>
+                    <a href="https://www.facebook.com/" class="icon-1">
+                        <img class="icon" style="display: inline; margin: 0 10px;" 
+                        src="assets/img/icon/facebook.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" class="icon-1">
+                        <img class="icon" style="display: inline; margin: 0 10px;" 
+                        src="assets/img/icon/instagram.png" alt="">
+                    </a>
+                    <a href = "mailto: TemplateSite@templatemail.com" class="icon-1">
+                        <img class="icon" style="display: inline; margin: 0 10px;" 
+                        src="assets/img/icon/email.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <h5>
+                © 2024 TemplateSite
+            </h5>
+        </div>
+    </div>
+
+    <!--Cookie bar-->
+    <div id="cookie-overlay">
+        <div class="row">
+            <div class="col-md-10 col-lg-6 offset-md-1 offset-lg-0">
+                <p class="cookie-info">
+                    The site uses cookies. 
+                </p>
+            </div>
+            <div class="col-md-10 col-lg-5 offset-md-1" style="padding-top: 15px;">
+                <button class="btn btn-inf" 
+                type="button" onclick="showCookieInfoOverlay()">
+                    More Info
+                </button>
+                <button class="btn btn-orange" 
+                type="button" onclick="hideCookieOverlay()">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="cookie-info-overlay">
+        <div class="popup">
+            <div class="bg">
+                <img class="logo-overlay" src="assets/img/logo.png"> 
+                <span style="float: right; margin: 10px;" onclick="hideCookieInfoOverlay()">
+                    <img class="x-icon" src="assets/img/icon/x_icon.png">
+                </span>
+                <h1>TemplateSite</h1>
+                <br/>
+                <p>
+                    Cookies<br/>
+                    <br/>
+                    Why do we use it?<br/>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    specimen book. It has survived not only five centuries, but also the leap into 
+                    electronic typesetting, remaining essentially unchanged. <br/>
+                </p>
+            </div>
+        </div>
+     </div>
+    
+	<script src="./assets/js/overlays.js"></script>
+	<script src="./assets/js/cookie.js"></script>
 </body>
 </html>
